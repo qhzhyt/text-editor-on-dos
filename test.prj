@@ -1,0 +1,9 @@
+text_editor(text_editor.h)
+draw_str(text_editor.h)
+mouse(text_editor.h)
+winbase(text_editor.h)
+file(text_editor.h)
+menu(text_editor.h)
+cursor(text_editor.h)
+work(text_editor.h)
+
