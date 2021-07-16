@@ -1,0 +1,9 @@
+editor(editor.h)
+draw_str(editor.h)
+mouse(editor.h)
+winbase(editor.h)
+file(editor.h)
+menu(editor.h)
+cursor(editor.h)
+work(editor.h)
+egavga.obj

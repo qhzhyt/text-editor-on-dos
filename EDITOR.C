@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <graphics.h>
-#include "test.h"
+#include "editor.h"
 
 main()
 {

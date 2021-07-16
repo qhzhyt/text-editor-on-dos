@@ -197,3 +197,4 @@ void save_bigimg(int x1,int x2,int y1,int y2);/*保存一块屏幕区域*/
 void put_bigimg(int x1,int x2,int y1,int y2);/*将保存的区域还原*/
 void init_winbase();
 void hlight_bar(int x1,int y1,int x2,int y2,int c);/*高亮一个矩形框*/
+/*void alloc_space();*/

@@ -3,26 +3,26 @@
 #include <stdlib.h>
 #include <graphics.h>
 #include <time.h>
-#include "test.h"
+#include "editor.h"
 
 extern int msvisible,mousex,mousey,mousekey;
-int start_x,start_y;/*å…‰æ ‡å¼€å§‹å¤„çš„ä½ç½®åæ ‡*/
-int cell_w,cell_h;/*å…‰æ ‡å•æ¬¡ç§»åŠ¨çš„å·¦å³è·ç¦»å’Œä¸Šä¸‹è·ç¦»*/
+int start_x,start_y;/*¹â±ê¿ªÊ¼´¦µÄÎ»ÖÃ×ø±ê*/
+int cell_w,cell_h;/*¹â±êµ¥´ÎÒÆ¶¯µÄ×óÓÒ¾àÀëºÍÉÏÏÂ¾àÀë*/
 int cur_x,cur_y;
 int cur_row,cur_col;
-int row_a,col_a;/*å…‰æ ‡å¯ç§»åŠ¨çš„æœ€å¤§è¡Œæ•°å’Œåˆ—æ•°*/
+int row_a,col_a;/*¹â±ê¿ÉÒÆ¶¯µÄ×î´óĞĞÊıºÍÁĞÊı*/
 
 void cursor_blink()
 {
     int t=500;
     setcolor(0);
     mouse_off();
-    line(cur_x,cur_y+1,cur_x,cur_y+14);/* ç”»å‡ºå…‰æ ‡ */
+    line(cur_x,cur_y+1,cur_x,cur_y+14);/* »­³ö¹â±ê */
     mouse_on();
-    mdelay(t);							/* å»¶æ—¶ä¸€æ®µæ—¶é—´ï¼Œæ¨¡æ‹Ÿå…‰æ ‡é—ªçƒçš„æ•ˆæœ */
+    mdelay(t);							/* ÑÓÊ±Ò»¶ÎÊ±¼ä£¬Ä£Äâ¹â±êÉÁË¸µÄĞ§¹û */
     setcolor(15);
     mouse_off();
-    line(cur_x,cur_y+1,cur_x,cur_y+14);/* æ¶ˆé™¤å…‰æ ‡ */
+    line(cur_x,cur_y+1,cur_x,cur_y+14);/* Ïû³ı¹â±ê */
     mouse_on();
     mdelay(t);
 }

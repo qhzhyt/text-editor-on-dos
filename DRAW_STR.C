@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<graphics.h>
 #include<string.h>
-#include"test.h"
+#include"editor.h"
 FILE *hzk_p,*asc_p;
 void open_zk()/*打开字库文件*/
 {

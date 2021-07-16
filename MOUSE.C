@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <graphics.h> 
 #include <time.h>
-#include "test.h"
+#include "editor.h"
 
 typedef struct
 {

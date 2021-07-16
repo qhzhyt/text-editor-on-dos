@@ -8,7 +8,7 @@
 #include<graphics.h>
 #include<string.h>
 #include<alloc.h>
-#include"test.h"
+#include"editor.h"
 
 char cur_filename[MAX_F_NAME*2];/*当前文件名*/
 char current_dir[MAX_PATH];/*当前目录名*/
@@ -192,8 +192,11 @@ void draw_max_dialog(int i)
     int y1=100;
     int y2=MAX_DIALOG_H+100;
     mouse_off();
+
     save_bigimg(x1,x2,y1,y2);
+    print_log("save_bigimg(x1,x2,y1,y2);");
     draw_win(x1,y1,x2,y2);
+    print_log("draw_win(x1,y1,x2,y2);");
     setfillstyle(1,9);
     bar(x1+1,y1,x2,y1+20);
     draw_img(x2-20,y1+2,img_close,15,4);
@@ -202,6 +205,7 @@ void draw_max_dialog(int i)
     draw_string(x1+45,y1+22,":",0);
     setfillstyle(1,15);
     bar(x1+60,y1+24,x1+300,y1+42);
+    print_log("bar(x1+60,y1+24,x1+300,y1+42);");
 
     draw_btn(x1+320,y1+24,x1+338,y1+42,7,0);
     if(is_rootdir(current_dir))/*如果当前目录为根目录绘制上层目录按钮为不可用状态*/

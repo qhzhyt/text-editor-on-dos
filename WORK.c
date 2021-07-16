@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <graphics.h>
 #include<alloc.h>
-#include "test.h"
+#include "editor.h"
 extern int start_x,start_y;                 /*外部变量光标的起始位置(cursor.c)*/
 extern int cell_w,cell_h;                   /*外部变量单个字符所占位置的宽与高(cursor.c)*/
 extern int msvisible,mousex,mousey,mousekey;/*外部变量鼠标的状态(mouse.c)*/
@@ -46,6 +46,10 @@ void hlight_viewline(int line,int flag,int mode);/*高亮字符*/
 void hlight_text();
 void settag();
 void hotkey_handle(int bios_key);/*快捷键处理*/
+
+text_line *get_textline(int n);
+text_line *goto_textline(text_line *head,int row);
+
 
 void init_workstate()
 {
@@ -863,10 +867,10 @@ void hlight_text()/*模拟文字的选中操作*/
 {
     int sta_x=mousex,sta_y=mousey;
     int sta_row,sta_col,i=1,j=1;
-    int t_row,t_col；
+    int t_row,t_col;
     cur_movetoxy(sta_x,sta_y,&sta_row,&sta_col);
     if(sta_col>view_text[sta_row]->len)
-		sta_col=view_text[sta_row]->len；
+		sta_col=view_text[sta_row]->len;
     while(mousekey==1)
     {
         if(mouse_move(mousex,mousey))

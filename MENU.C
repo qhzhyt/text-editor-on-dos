@@ -3,7 +3,7 @@
 #include <graphics.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "test.h"
+#include "editor.h"
 
 extern int msvisible,mousex,mousey,mousekey;
 extern int curfile_saved;

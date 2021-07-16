@@ -1,7 +1,7 @@
 #include <graphics.h>
 #include<alloc.h>
 #include<string.h>
-#include"test.h"
+#include"editor.h"
 
 extern int msvisible,mousex,mousey,mousekey;
 void *imgp1,*imgp2;
